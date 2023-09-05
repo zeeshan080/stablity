@@ -1,5 +1,8 @@
 import fs from "node:fs";
 import { NextRequest, NextResponse } from "next/server";
+// Set the runtime to edge for best performance
+export const runtime = "edge";
+
 const engineId = "stable-diffusion-xl-1024-v1-0";
 const apiHost = process.env.API_HOST ?? "https://api.stability.ai";
 const apiKey = process.env.STABILITY_API_KEY;
